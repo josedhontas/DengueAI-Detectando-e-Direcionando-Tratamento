@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="styles/componentesReuso.css"> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+
+    <link rel="stylesheet" href="styles/consulta.css">
+    <link rel="stylesheet" href="styles/componentesReuso.css">
+    <style>
+        canvas {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+    <title>Tela de Consulta</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">D&D</a>
+
+        <nav class="navbar">
+            <div class="testWve">
+                <a href="../index.html">Home</a>
+                <a href="index_consulta.html" class="active">Consulta Online</a>
+                <a href="index_painel.html">Painel Controle</a>
+                <a href="index_hospitais.html">Hospitais</a>
+                <a href="index_contaminacao.html">Contaminação</a>
+                <a href="index_unidades.html">Novas unidades</a>
+            </div> <!-- <a id="botao" href="../ScreenLogin/login-index.html">Login</a> -->
+        </nav>
+    </header>
+
+    <section class="consulta" id="consulta">
+        <div class="mach">
+            <h1>MACHINE LEARNING</h1>
+            <span class="traço"></span>
+        </div>
+
+        <h2>PREVISÃO DE DENGUE</h2>
+
+        <div class="consulta-content">
+            <div id="resultado"></div>
+
+
+            <form id="consulta-form">
+                <div class="dados-de-cosulta " class=" formulario">
+                    <div class="esquerda">
+                        <div class="dados-user">
+                            <div class="input-nome">
+                                <div class="input-dados">
+                                    <label for="firstname">PrimeiroNome:</label>
+                                    <input id="firstname" type="text" name="firstname"
+                                        placeholder="Digite seu primeiro nome" required>
+                                </div>
+
+                                <div class="input-dados">
+                                    <label for="lastname">Sobrenome:</label>
+                                    <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="input-dados">
+                                <label for="idade">Idade:</label>
+                                <input id="idade" type="number" name="idade" placeholder="Digite sua idade" min="0">
+                            </div>
+
+                            <div class="input-endereço">
+                                <div class="input-dados">
+                                    <label for="endereco">Endereço:</label>
+                                    <input id="endereco" type="text" name="endereco" placeholder="Digite seu Endereço"
+                                        required>
+                                </div>
+
+                                <div class="input-dados">
+                                    <label for="numero">Nº:</label>
+                                    <input id="numero" type="number" name="numero" min="0">
+                                </div>
+                            </div>
+
+                            <div class="input-dados">
+                                <label for="complemento">Complemento:</label>
+                                <input id="complemento" type="text" name="complemento">
+                            </div>
+
+                            <div class="input-cep">
+                                <div class="input-dados">
+                                    <label for="cep">CEP:</label>
+                                    <input id="cep" type="text" name="cep" required>
+                                </div>
+
+                                <div class="input-dados">
+                                    <label for="estado">Estado:</label>
+                                    <input id="estado" type="text" name="estado" required>
+                                </div>
+                            </div>
+
+                            <div class="input-cidade">
+                                <div class="input-dados">
+                                    <label for="cidade">Cidade:</label>
+                                    <input id="cidade" type="text" name="cidade" required>
+                                </div>
+
+                                <div class="input-dados">
+                                    <label for="bairro">Bairro:</label>
+                                    <input id="bairro" type="text" name="bairro" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="direita">
+                        <div class="sintomas">
+                            <label for="febre">Está com febre?</label>
+                            <div class="opcoes">
+                                <div>
+                                    <input type="radio" id="sim" name="febre" value=1 required>
+                                    <label for="sim">Sim</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="não" name="febre" value=0 required>
+                                    <label for="não">Não</label>
+                                </div>
+                            </div>
+
+                            <label for="cabeca">Está com dor de cabeça?</label>
+                            <div class="opcoes">
+                                <div>
+                                    <input type="radio" id="sim" name="cabeca" value=1 required>
+                                    <label for="sim">Sim</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="não" name="cabeca" value=0 required>
+                                    <label for="não">Não</label>
+                                </div>
+                            </div>
+
+                            <label for="articulacoes">Está sentindo alguma dor nas articulações?</label>
+                            <div class="opcoes">
+                                <div>
+                                    <input type="radio" id="sim" name="articulacoes" value=1 required>
+                                    <label for="sim">Sim</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="não" name="articulacoes" value=0 required>
+                                    <label for="não">Não</label>
+                                </div>
+                            </div>
+
+                            <label for="sangramento">Está com algum tipo de sagramento?</label>
+                            <div class="opcoes">
+                                <div>
+                                    <input type="radio" id="sim" name="sangramento" value=1 required>
+                                    <label for="sim">Sim</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="não" name="sangramento" value=0 required>
+                                    <label for="não">Não</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" id="consultar-btn">Consultar</button>
+            </form>
+
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1137 @@
+* {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #34bbda;
+}
+
+
+section {
+    min-height: 10vh;
+    padding: 8rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: default;
+    /* ------------------------------------------------------------- */
+    /* border: 1px solid peru; */
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-left: 3rem;
+    transition: .2s;
+    /* ------------------------------------------------------------- */
+    /* border: 1px solid bisque; */
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-top: 4px solid var(--main-color);
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#icon {
+    cursor: pointer;
+    width: 22px;
+    background-image: var(--text-color);
+    margin-left: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+
+#menu-icon {
+    font-size: 3.0rem;
+    color: var(--text-color);
+    display: none;
+}
+
+#botao {
+    /* cor de fundo do botão */
+    background: var(--text-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 .3px var(--text-color);
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    font-weight: 500;
+}
+
+#botao:hover {
+    background: var(--main-color);
+    box-shadow: 0 0 .7px var(--main-color);
+
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px;
+}
+
+
+.home-content {
+    width: 100vw;
+    margin-top: 20px;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 2.6rem;
+    color: black;
+    text-align: left;
+    margin: 9px 81px 0px 0px;
+}
+
+
+.home-content p:nth-of-type(1) {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.home-img {
+    width: 100vw;
+    opacity: 0;
+    animation: zoomIn .5s ease forwards;
+    animation-delay: .5s;
+}
+
+.img-headline {
+    padding: 0;
+    text-align: center;
+    max-width: 100%;
+}
+
+
+.img-rosa {
+    text-align: left;
+    height: 150px;
+    max-width: 50%;
+}
+
+.info {
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--secund-bg-color);
+}
+
+
+#info2 {
+    margin-top: -100px;
+}
+
+.info .container-info {
+    display: flex;
+    align-items: center;
+}
+
+.info .info-text {
+    width: 50%;
+    padding: 0 40px;
+}
+
+.info .info-text h3 {
+    font-size: 40px;
+}
+
+.info .info-text p {
+    margin: 5px 0 10px 0;
+    font-size: 20px;
+    margin-top: 2rem;
+}
+
+.info-text #text2 {
+    text-align: right;
+}
+
+.info .info-img {
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+
+.info .info-img img {
+    width: 100%;
+}
+
+/* TELA DE RECURSOS */
+
+.recursos {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.recursos-txt {
+    padding: 0;
+    position: relative;
+    scroll-margin-top: 72px;
+    text-align: center;
+    width: 100%;
+    order: 3;
+}
+
+
+
+.recursos-txt p {
+    font-weight: 500;
+    font-size: 1.9rem;
+    text-align: center;
+    color: var(--secund-text-color);
+    padding: 20px 25rem 8px 25rem;
+}
+
+.container-cards {
+    width: 100%;
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.container-cards .card {
+    position: relative;
+    cursor: pointer;
+}
+
+.container-cards .card .face {
+    width: 290px;
+    height: 190px;
+    transition: 0.5s;
+    border-radius: 10px;
+
+}
+
+.container-cards .card .face.face1 {
+    position: relative;
+    background: var(--quaternary-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container-cards .card:hover .face.face1 {
+    opacity: 90%;
+    transform: translateY(0px);
+}
+
+.face.face1 i {
+    font-size: 10rem;
+    color: var(--main-color);
+}
+
+.container-cards .card .face.face1 .content-card {
+    transition: 0.5s;
+}
+
+.container-cards .card:hover .face.face1 .content-card {
+    opacity: 1;
+    color: var(--text-color);
+
+}
+
+.container-cards .card .face.face1 .content-card h3 {
+    margin: 10px;
+    color: var(--main-color);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container-cards .card .face.face2 {
+    position: relative;
+    /* background: #363434; */
+    background: var(--terciary-bg-color);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: translateY(-90px);
+    color: var(--text-color);
+}
+
+
+.container-cards .card .face.face2 p {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: justify;
+    font-weight: 900;
+}
+
+.container-cards .card:hover .face.face2 {
+    transform: translateY(0);
+}
+
+
+.heading {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+/* NOVA SEÇÃO */
+
+.main-solutions {
+    width: 100%;
+    height: auto;
+    background-color: var(--secund-bg-color);
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+}
+
+
+.main-solutions .heading {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/* Container Css Start  */
+
+.container-solutions {
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+
+.container-solutions ul::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-image: linear-gradient(to right, #12878f, var(--main-color), #b2faff);
+}
+
+.container-solutions ul {
+    list-style: none;
+}
+
+.container-solutions ul li {
+    width: 50%;
+    height: auto;
+    padding: 15px 20px;
+    background-color: var(--terciary-bg-color);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 25px black;
+    position: relative;
+    z-index: 99;
+}
+
+
+.container-solutions ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+}
+
+.container-solutions ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+}
+
+.container-solutions ul li:nth-child(5) {
+    margin-bottom: 0;
+}
+
+.container-solutions ul li .title-solutions {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color-text-final);
+}
+
+ul li p {
+    font-size: 15px;
+    color: var(--secund-text-color);
+    margin: 7px 0;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.container-solutions ul li .circle-solutions {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--quaternary-bg-color);
+    position: absolute;
+    top: 0;
+}
+
+.container-solutions ul li .circle-solutions::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-solutions ul li:nth-child(odd) .circle-solutions {
+    right: -30px;
+    transform: translate(50%, -50%);
+}
+
+.container-solutions ul li:nth-child(even) .circle-solutions {
+    left: -30px;
+    transform: translate(-50%, -50%);
+}
+
+/* Contate section */
+.contener-ft {
+    display: flex;
+    position: absolute;
+
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--secund-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.contener-ft {
+    display: flex;
+    position: absolute;
+    margin-top: -25rem;
+    margin: -16rem 85rem;
+}
+
+.contener-ft img {
+    width: 35rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--secund-bg-color);
+}
+
+.footer-txt {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background-color: var(--secund-text-color);
+    border-radius: .8rem;
+}
+
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 .3rem var(--text-color);
+}
+
+
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--secund-bg-color);
+
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* RESPONSIVIDADE */
+
+/*  Media Query Started  */
+
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .contener-ft img {
+        display: none;
+    }
+
+    .container-solutions {
+        width: 85%;
+    }
+}
+
+
+@media screen and (max-width:993px) {
+    .container-solutions {
+        width: 80%;
+        transform: translateX(15px);
+    }
+
+    .container-solutions ul::after {
+        left: -30px;
+    }
+
+    .container-solutions ul li {
+        width: 100%;
+        float: none;
+        clear: none;
+        margin-bottom: 80px;
+    }
+
+    .container-solutions ul li:nth-child(odd) {
+        text-align: left;
+        transform: translateX(0);
+    }
+
+    .container-solutions ul li:nth-child(odd) .circle-solutions {
+        left: -30px;
+        transform: translate(-50%, -50%);
+    }
+
+    .container-solutions ul li:nth-child(even) {
+        transform: translateX(0);
+    }
+}
+
+
+@media (max-width: 991px) {
+    .recursos-txt p {
+        padding: 0;
+        text-align: center;
+    }
+
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .home-img {
+        display: none;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+        margin-left: 10rem;
+        margin-bottom: 90px;
+    }
+
+    .home-content h3,
+    .home-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .info .info-text {
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+    }
+
+    .info-text #text2 {
+        text-align: left;
+    }
+
+    .info .container-info {
+        flex-direction: column;
+    }
+
+    .info .info-text h3 {
+        font-size: 48px;
+    }
+
+    .info .info-text p {
+        font-size: 18px;
+    }
+
+    .info .info-img img {
+        width: 80%;
+    }
+
+    .info .info-text,
+    .info .info-img {
+        width: 100%;
+    }
+
+    /* seção footer */
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 600px) {
+    .info .info-text p {
+        font-size: 15px;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .heading h3 {
+        font-size: 16px;
+    }
+
+    .recursos-txt p {
+        font-size: 12px;
+
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+
+    .info .info-text h3 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-img img {
+        width: 90vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+.services {
+
+    min-height: 100vh;
+}
+
+
+
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.services-container .services-box {
+    flex: 1 1 30rem;
+    background: var(--secund-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    position: relative;
+    cursor: pointer;
+}
+
+.services-box i {
+    font-size: 7rem;
+    color: var(--text-color);
+}
+
+.services-box h3 {
+    font-size: 2.6rem;
+}
+
+
+
+.testWve .active,
+.testWve a:hover {
+    background-color: #ed9242;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+
+
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+    /* largura da barra de rolagem */
+}
+
+/* Estilo do trilho da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* cor do trilho */
+}
+
+/* Estilo do botão da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: #60605c;
+    /* cor do botão */
+    border-radius: 6px;
+    /* borda do botão */
+}
+
+/* Estilo do botão da barra de rolagem quando passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #60605c;
+    /* cor do botão quando passar o mouse */
+}
+
+/* Apartir daqui foi alterado por camilo ou adicionado */
+
+.consulta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    /* background-color: #ffffff; */
+}
+
+.consulta h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    white-space: nowrap;
+    /* Esta linha mantém o texto em uma única linha */
+    color: #60605c;
+}
+
+.consulta h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    white-space: nowrap;
+    /* Esta linha mantém o texto em uma única linha */
+    align-self: flex-start;
+}
+
+.mach {
+    display: flex;
+    position: relative;
+    align-self: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1.5rem;
+}
+
+.traço {
+    position: absolute;
+    left: 100%;
+    transform: translateY(-50%);
+    height: 2px;
+    /* Ajuste a altura do traço conforme necessário */
+    width: 100px;
+    /* Ajuste a largura do traço conforme necessário */
+    background-color: #ed9242;
+    /* Cor do traço */
+}
+
+.consulta-content {
+    width: 82vw;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 10px;
+    background: #ed9242;
+    border-radius: 7px;
+    box-shadow: 0 0 .50px black;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+    transition: .2s ease;
+    cursor: pointer;
+    margin-top: 5rem;
+}
+
+.btn:hover {
+    background: #60605c;
+    ;
+    box-shadow: 0 0 .5px black;
+    color: black;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.dados-de-cosulta {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.esquerda {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+    background-color: #00000017;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.direita {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #00000017;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.dados-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.sintomas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.sintomas .opcoes {
+    display: flex;
+    flex-direction: row;
+}
+
+.sintomas label {
+    font-size: 1.6rem;
+    color: #60605c;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="radio"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.dados-user {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.6rem;
+    color: #60605c;
+}
+
+.input-dados,
+.input-dados2,
+.input-cidade {
+    width: 100%;
+}
+
+.input-nome {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.input-nome .input-dados {
+    width: 48%;
+}
+
+.sintomas .opcoes {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os radios horizontalmente */
+}
+
+.sintomas label {
+    font-size: 1.6rem;
+    color: #60605c;
+    margin-right: 10px;
+    /* Adiciona um espaço entre o label e o radio */
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    /* Alinha verticalmente com o texto */
+}
+
+input[type="radio"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+
+.sintomas div {
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+
+.input-dados {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-dados2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    margin-left: 10%;
+}
+
+.input-endereço {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.input-nome {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.input-cep {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.input-cidade {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+
+/* Estilo para o formulário */
+.formulario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    /* Para centralizar verticalmente o botão */
+}
+
+/* Estilo para o botão Consultar dentro do formulário */
+.formulario #consultar-btn {
+    margin-top: 10px;
+    /* Espaçamento superior */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    background-color: #007bff;
+    /* Cor de fundo */
+    color: #fff;
+    /* Cor do texto */
+    border: none;
+    /* Remove a borda */
+    border-radius: 5px;
+    /* Borda arredondada */
+    cursor: pointer;
+    /* Cursor ao passar por cima */
+}
+
+/* Estilo para o botão Consultar quando hover */
+.formulario #consultar-btn:hover {
+    background-color: #0056b3;
+    /* Cor de fundo ao passar o mouse */
+}

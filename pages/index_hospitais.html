@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/painel.css">
+    <title>Mapa</title>
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <a href="#" class="logo">D&D</a>
+
+        <nav class="navbar">
+            <div class="testWve">
+                <a href="../index.html">Home</a>
+                <a href="index_consulta.html">Consulta Online</a>
+                <a href="index_painel.html">Painel Controle</a>
+                <a href="index_hospitais.html" class="active">Hospitais</a>
+                <a href="index_contaminacao.html">Contaminação</a>
+                <a href="index_unidades.html">Novas unidades</a>
+            </div> <!-- <a id="botao" href="../ScreenLogin/login-index.html">Login</a> -->
+        </nav>
+    </header>
+    <section class="painel" id="painel">
+        <div class="content-divs">
+            <div class="left">
+                <div class="conteiner-left">
+                    <div class="palavras">
+                        <h1>Previsão Dengue</h1>
+                        <p>A informações apresentadas ao lado ilustra a distribuição dos hospitais agrupados por regiões
+                            na
+                            área sergipana. Os dados foram meticulosamente plotados, destacando especificamente os
+                            hospitais onde o número de casos é igual ou superior à capacidade de leitos disponíveis.
+                            Essas informações foram obtidas a partir da base de dados da Unidade Básica de Saúde (UBS)
+                            da região de Sergipe.
+                            <br>
+                            Além disso, é importante ressaltar sobre a distribuição geográfica da capacidade hospitalar
+                            em relação à demanda por serviços
+                            de saúde. Ao analisar os pontos de concentração de casos em relação aos recursos
+                            disponíveis, é possível identificar áreas que podem estar enfrentando desafios
+                            significativos no atendimento às necessidades médicas da população.
+                        </p>
+                    </div>
+                    <div class="alerta">
+                        <p>É importante consultar um médico ao apresentar sintomas suspeitos de dengue.</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="right">
+                <div>
+                    <h2>Analisando as regiões com maior indice de contaminação</h2>
+                </div>
+                <div class="mapa_total">
+                    <iframe src="./mapas/mapa_clusters_e_otimizacao1.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- <script src="comum.js"></script> -->
+    </section>
+</body>
+
+</html>

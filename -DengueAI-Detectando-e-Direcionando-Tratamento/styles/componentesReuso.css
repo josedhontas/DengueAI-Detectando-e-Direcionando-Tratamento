@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+:root {
+    --bg-color: #1f242d;
+    /* #88abff */
+    --secund-bg-color: #323946;
+    --terciary-bg-color: #363434;
+    --text-color: #fff;
+    --main-color: #00eeff;
+    --secund-text-color: wheat;
+    --color-text-initial: rgb(220, 204, 204);
+    --color-text-final: #00eeff;
+    --card-color-box: rgba(0, 0, 0, 0.8);
+    --header-color: #1f242d;
+    --scrollbar: #323946;
+    --quaternary-bg-color: #424242;
+    --card-color: #323946;
+    --boxtextfield: rgb(94, 94, 94);
+    --title-txt: #00eeff;
+    --placeholder-color: #878787de;
+    --txt-btn: #000;
+    --span-color: wheat;
+    --color-btn-hover: #fff;
+    --title2-color: #00eeff;
+    --shadow-color: #000;
+    --found-color: #556c6c;
+    --navbar-color: #323946;
+    --color-note: #fff;
+    --star-color-back: #e6e6e6;
+    --card-parent-kanban: #f3f3f3;
+    --inutilizado-plas: rgb(10, 10, 10);
+    --colorbemVindo: #767265;
+}
+
+.light-theme {
+    --bg-color: #eee;
+    --secund-bg-color: #fff;
+    --terciary-bg-color: rgb(42, 177, 187);
+    --text-color: #000;
+    --main-color: rgb(42, 177, 187);
+    --secund-text-color: #1f242d;
+    --color-text-initial: #323946;
+    --color-text-final: #b2faff;
+    --card-color-box: rgb(224, 217, 217);
+    --header-color: #fff;
+    --scrollbar: #e6f8f9;
+    --quaternary-bg-color: #3d5874;
+    --card-color: #fff;
+    --boxtextfield: #ccc;
+    --title-txt: #1b1642;
+    --placeholder-color: #929292de;
+    --txt-btn: #fff;
+    --span-color: #0a369d;
+    --color-btn-hover: #00eeff;
+    --title2-color: #0a369d;
+    --shadow-color: grey;
+    --found-color: #afd6d3;
+    --navbar-color: #018BA0;
+    --color-note: #ffc222;
+    --star-color-back: grey;
+    --card-parent-kanban: #cdcdcdde;
+    --inutilizado-plas: rgb(194, 194, 194);
+    --colorbemVindo: #f5deb3;
+
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box textarea:focus,
+.user-details .input-box option:focus {
+    border-color: #00eeff;
+    color: white;
+}
+
+
+body::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 4px;
+    background-color: var(--scrollbar);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #00eeff;
+}
+
+.btn-component {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-weight: bold;
+    background: var(--title-txt);
+    box-shadow: 0 0 2px var(--title-txt);
+    color: var(--txt-btn);
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+    transition: .2s ease;
+}
+
+.btn-component:hover {
+    background: var(--color-btn-hover);
+    box-shadow: 0 0 5px var(--color-btn-hover);
+    color: #000;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: var(--text-color);
+    -webkit-box-shadow: rgb(94, 94, 94) inset;
+    font-size: 12pt;
+    transition: background-color 5000s ease-in-out 0s;
+}

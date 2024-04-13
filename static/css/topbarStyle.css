@@ -1,0 +1,109 @@
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    transition: 0.5s;
+    box-shadow: 0px 0px 6px black;
+    background: #eeee;
+}
+
+
+
+.topbar .toggle-icon {
+    font-size: 22px;
+    color: var(--text-color);
+    margin-right: 30px;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    margin-left: -15px;
+}
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+    color: var(--color-text-initial);
+
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    background: var(--secund-bg-color);
+    border: 1px solid var(--shadow-color);
+    color: var(--color-text-initial);
+}
+
+.search label i {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2rem;
+}
+
+.icon-dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user h2 {
+    color: var(--title2-color);
+    font-size: 12px;
+    font-weight: 800;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.photo {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main {
+    transition: 0.5s;
+}

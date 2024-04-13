@@ -1,0 +1,123 @@
+* {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #34bbda;
+}
+
+
+section {
+    min-height: 10vh;
+    padding: 8rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: default;
+    /* ------------------------------------------------------------- */
+    /* border: 1px solid peru; */
+}
+
+.navbar a {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-left: 3rem;
+    transition: .2s;
+    /* ------------------------------------------------------------- */
+    /* border: 1px solid bisque; */
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-top: 4px solid var(--main-color);
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#icon {
+    cursor: pointer;
+    width: 22px;
+    background-image: var(--text-color);
+    margin-left: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+
+#menu-icon {
+    font-size: 3.0rem;
+    color: var(--text-color);
+    display: none;
+}
+
+#botao {
+    /* cor de fundo do botão */
+    background: var(--text-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 .3px var(--text-color);
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    font-weight: 500;
+}
+
+#botao:hover {
+    background: var(--main-color);
+    box-shadow: 0 0 .7px var(--main-color);
+
+
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px;
+}
+
+
+.home-content {
+    width: 100vw;
+    margin-top: 20px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="styles/componentesReuso.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/introduction.css') }}">
+    <style>
+        canvas {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+    <title>Projeto Mosquito</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">D&D</a>
+
+        <nav class="navbar">
+            <div class="testWve">
+                <a href="index.html" class="active">Home</a>
+                <a href="{{ url_for('index_consulta') }}">Consulta Online</a>
+                <a href="{{ url_for('index_painel') }}">Painel Controle</a>
+                <a href="{{ url_for('index_hospitais') }}">Hospitais</a>
+                <a href="{{ url_for('index_contaminacao') }}">Contaminação</a>
+                <a href="{{ url_for('index_unidades') }}">Novas unidades</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+            <h1>Plataforma para controle e gerenciamento de risco em combate a Dengue</h1>
+
+            <p>Ao fornecer informações em tempo real sobre áreas de risco, casos confirmados e medidas preventivas, essa
+                plataforma permite uma abordagem proativa para mitigar a propagação do vírus. Por meio de mapas
+                interativos
+                e orientações, a página capacita tanto autoridades de saúde quanto a comunidade em geral a tomar medidas
+                preventivas e de combate direcionadas.
+            </p>
+            <div class="input-bx">
+                <input id="text" type="text" placeholder="Endereço de email" autocomplete="off">
+                <a class="btn" id="criar-conta-btn" href="index_consulta.html">Acesse a consulta</a>
+            </div>
+        </div>
+        <div class="home-img">
+
+            <img src="{{ url_for('static', filename='img/mosquito2.png') }}" alt="mosquito dengue">
+        </div>
+    </section>
+    <canvas id="canvas" style="position: absolute; top: calc(88% + 20px);"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var width = canvas.width = window.innerWidth;
+        var height = canvas.height = window.innerHeight;
+        var centerY = height * 0.02;
+        var baseHeight = height * 0.2;
+        var amplitude = 20;
+
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.beginPath();
+            ctx.moveTo(0, centerY);
+            for (var x = 0; x < width; x++) {
+                var y = centerY + Math.sin(x * 0.005) * amplitude;
+                ctx.lineTo(x, y);
+            }
+            ctx.lineTo(width, height);
+            ctx.lineTo(0, height);
+            ctx.closePath();
+            ctx.fillStyle = "#fff";
+            ctx.fill();
+        }
+
+        window.addEventListener("resize", function () {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            centerY = height * 0.3;
+            baseHeight = height * 0.2;
+            draw();
+        });
+
+        draw(); 
+    </script>
+
+    <script src="{{ url_for('static', filename='js/introduction.js') }}"></script>
+</body>
+
+</html>

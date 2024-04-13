@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/painel.css') }}">
+    <title>Mapa</title>
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <a href="#" class="logo">D&D</a>
+
+        <nav class="navbar">
+            <div class="testWve">
+                <a href="/">Home</a>
+                <a href="{{ url_for('index_consulta') }}">Consulta Online</a>
+                <a href="{{ url_for('index_painel') }}">Painel Controle</a>
+                <a href="{{ url_for('index_hospitais') }}">Hospitais</a>
+                <a href="{{ url_for('index_contaminacao') }}">Contaminação</a>
+                <a href="{{ url_for('index_unidades') }}">Novas unidades</a>
+            </div> <!-- <a id="botao" href="../ScreenLogin/login-index.html">Login</a> -->
+        </nav>
+    </header>
+    <section class="painel" id="painel">
+        <div class="content-divs">
+            <div class="left">
+                <div class="conteiner-left">
+                    <div class="palavras">
+                        <h1>Previsão Dengue</h1>
+                        <p>Utilizando estratégias de otimização e análise detalhada dos pontos de foco, das regiões
+                            afetadas e da demanda hospitalar, foi possível construir e selecionar novos postos de apoio.
+                            O
+                            objetivo é alcançar a distribuição geográfica mais eficiente de hospitais e unidades de
+                            saúde, visando minimizar os custos associados ao tratamento de pessoas infectadas com
+                            doenças específicas nessas áreas identificadas.
+                            <br>
+                            Essa abordagem permite uma alocação mais precisa de recursos de saúde, direcionando
+                            investimentos para as regiões onde são mais necessários. Ao identificar as áreas mais
+                            críticas em termos de incidência de doenças e demanda por serviços médicos, é possível
+                            implementar medidas preventivas e de tratamento de forma proativa, contribuindo para a
+                            melhoria do sistema de saúde como um todo e para a qualidade de vida da população afetada.
+
+
+
+
+
+
+
+                        </p>
+                    </div>
+                    <div class="alerta">
+                        <p>É importante consultar um médico ao apresentar sintomas suspeitos de dengue.</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="right">
+                <div>
+                    <h2>Analisando as regiões com maior indice de contaminação</h2>
+                </div>
+                <div class="mapa_total">
+                    <iframe src="{{ url_for('static', filename='mapas/mapa_clusters_e_otimizacao3.html') }}" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/comum.js') }}"></script>
+</body>
+
+</html>

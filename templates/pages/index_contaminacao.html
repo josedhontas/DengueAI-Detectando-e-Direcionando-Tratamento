@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/painel.css') }}">
+    <title>Mapa</title>
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <a href="#" class="logo">D&D</a>
+
+        <nav class="navbar">
+            <div class="testWve">
+                <a href="/">Home</a>
+                <a href="{{ url_for('index_consulta') }}">Consulta Online</a>
+                <a href="{{ url_for('index_painel') }}">Painel Controle</a>
+                <a href="{{ url_for('index_hospitais') }}">Hospitais</a>
+                <a href="{{ url_for('index_contaminacao') }}">Contaminação</a>
+                <a href="{{ url_for('index_unidades') }}">Novas unidades</a>
+            </div> <!-- <a id="botao" href="../ScreenLogin/login-index.html">Login</a> -->
+        </nav>
+    </header>
+    <section class="painel" id="painel">
+        <div class="content-divs">
+            <div class="left">
+                <div class="conteiner-left">
+                    <div class="palavras">
+                        <h1>Previsão Dengue</h1>
+                        <p>A área ao lado apresenta o índice de contaminação por região. Utilizando dados
+                            coletados da incidência de casos de dengue, os registros positivos foram cuidadosamente
+                            selecionados e agrupados por região. O mapa de calor exibe de forma visual as áreas onde
+                            esses casos foram detectados, destacando os pontos de concentração por meio dos centroides
+                            de cada grupo.
+                            <br>
+
+                            Ao identificar os pontos de foco no mapa, é possível direcionar esforços e
+                            intervenções específicas para áreas que apresentam maior incidência de casos, contribuindo
+                            assim para o controle eficaz da propagação da doença e para a proteção da saúde pública.
+                        </p>
+                    </div>
+                    <div class="alerta">
+                        <p>É importante consultar um médico ao apresentar sintomas suspeitos de dengue.</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="right">
+                <div>
+                    <h2>Analisando as regiões com maior indice de contaminação</h2>
+                </div>
+                <div class="mapa_total">
+                    <iframe src="{{ url_for('static', filename='mapas/mapa_clusters_e_otimizacao2.html') }}" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <script src="comum.js"></script> -->
+</body>
+
+</html>
